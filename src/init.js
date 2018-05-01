@@ -1,5 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
+  // var audio = new Audio('audio_file.mp3');
+  // audio.play();
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -19,15 +21,16 @@ $(document).ready(function() {
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
+    console.log(dancerMakerFunctionName, dancerMakerFunction)
 
     // make a dancer with a random position
 
-    var dancer = new dancerMakerFunction(
+    var dancer = /*new*/ dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
   });
-});
 
+});

@@ -42,12 +42,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 };
 
 makeDancer.prototype.step = function() {
-  // this.callCount = 0;
-  // var blinkyThis = this;
-  // console.log(this);
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
-  // this.callCount++;
-  
 };
 
 makeDancer.prototype.setPosition = function(top, left) {
@@ -68,7 +63,7 @@ class makeDancer {
     this.$node.css(styleSettings);
     this.setPosition(top, left);
   }
-  
+
   step(){
     setTimeout(dancer.step, timeBetweenSteps);
   }
