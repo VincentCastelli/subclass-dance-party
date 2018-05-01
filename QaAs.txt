@@ -1,1 +1,5 @@
 What's the deal with the extra tick call?
+  >>Solved by: it was a problem with bind, and the order in ehich variables were called
+ReferenceError: makeFadedDancer is not defined
+  >>Solved by: 
+Having difficulty specifying additional event triggers on certain node types or classes.
