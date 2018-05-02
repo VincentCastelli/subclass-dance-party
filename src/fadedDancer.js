@@ -1,4 +1,4 @@
-var makeDancer = function(top, left, timeBetweenSteps) {
+var makeFadedDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<img class="fadedDancer fade" src="/Users/student/code/hrsf95-subclass-dance-party/assets/louiseBelcher1.gif"/>');
   this.setPosition(top, left);
