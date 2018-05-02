@@ -20,7 +20,7 @@ $(document).ready(function() {
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
     // get the maker function for the kind of dancer we're supposed to make
-    var dancerMakerFunction = window[dancerMakerFunctionName];
+    var dancerMakerFunction = /*new?*/window[dancerMakerFunctionName];
     // console.log(dancerMakerFunctionName, dancerMakerFunction)
 
     // make a dancer with a random position
@@ -33,7 +33,7 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
 
     $('.fadedDancer').on('mouseover', function(event) {
-      $('#fade').fadeToggle(1000);
+      $('.fade').fadeToggle(1000);
     });
   });
 });

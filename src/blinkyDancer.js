@@ -21,6 +21,7 @@
 /*PSEUDOCLASSICAL*/
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node.addClass('blinkyDancer');
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
@@ -31,6 +32,7 @@ makeBlinkyDancer.prototype.step = function() {
   // console.log(this);
   makeDancer.prototype.step.call(this);
   this.$node.toggle();
+  this.$node = $('<img class="blinkyDancer" src="/Users/student/code/hrsf95-subclass-dance-party/assets/geneBelcher1.gif"/>');
 };
 
 
