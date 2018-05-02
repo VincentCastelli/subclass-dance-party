@@ -4,7 +4,7 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
-  background-image: url("/Users/student/code/hrsf95-subclass-dance-party/assets/beirut.jpg");
+  background-image: url("/Users/student/code/hrsf95-subclass-dance-party/assets/Bobs_street_scene.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 18px;
@@ -23,13 +23,8 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
-}
 
-.blinkyDancer, .fadedDancer, .shimmyDancer{
+.dancer, .blinkyDancer, .fadedDancer, .shimmyDancer{
   position: absolute;
 }
 

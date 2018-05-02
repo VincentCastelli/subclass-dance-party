@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  
   // var audio = new Audio('audio_file.mp3');
   // audio.play();
 
@@ -20,7 +21,7 @@ $(document).ready(function() {
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
     // get the maker function for the kind of dancer we're supposed to make
-    var dancerMakerFunction = /*new?*/window[dancerMakerFunctionName];
+    var dancerMakerFunction = window[dancerMakerFunctionName];
     // console.log(dancerMakerFunctionName, dancerMakerFunction)
 
     // make a dancer with a random position
@@ -31,9 +32,19 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
 
     $('.fadedDancer').on('mouseover', function(event) {
       $('.fade').fadeToggle(1000);
     });
   });
+
+  $('.lineup').on('click', function(event) {
+    var dancerlineupFunctionName = $(this).data('dancer-lineup-function-name');
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].setPosition(200, 20);
+    }
+
+  });
 });
+
