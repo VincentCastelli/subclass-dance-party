@@ -34,8 +34,9 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
 
-    $('.fadedDancer').on('mouseover', function(event) {
-      $('.fade').fadeToggle(1000);
+    $('body').on('mouseover', '.fadedDancer', function() {
+      $(this).fadeToggle(1000);
+      console.log(this);
     });
   });
 
